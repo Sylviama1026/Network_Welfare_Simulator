@@ -28,7 +28,8 @@ The output of `final_wrapper_V()` is a table which includes:
 
 ## Major Files
 - `final_wrapper_V.m`: the wrapper function that call `final_V.m` and `final_solver.m` to solve welfare, $\tau_k$, and $\tau_l$, and plot welfare across different K.
+- `final_example.m`: an illustration of how to use `final_wrapper_V()` to compute cutoff time $\tau$ and generate welfare plot for each K given by the user.
 - `final_tool_all.m`: expand the wrapper function `final_wrapper_V()`. It can be used to customize function output as needed.
-- `final_solver.m`: compute $\tau_l$ and $\tau_k$ by solving indffierence conditions for core and peripheral agents respectively, with parameters $I$, $L(=I-K)$, $x$, $y(=(x-c)/r)$, $c$, $r$, $p0$
+- `final_solver.m`: compute $\tau_l$ and $\tau_k$ by solving indffierence conditions for core and peripheral agents respectively, with parameters $I$, $L(=I-K)$, $x$, $y(=\frac{x-c}{r})$, $c$, $r$, $p0$
 - `final_V.m`: compute welfare as a function of K with parameters $\tau_l$, $\tau_k$, $I$, $L(=I-K)$, $x$, $c$, $r$, $p0$
 
