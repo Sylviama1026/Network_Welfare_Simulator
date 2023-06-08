@@ -5,7 +5,7 @@ This MATLAB simulator can generate welfare and social information plots for diff
 Innovations are key drivers of long-term economic growth, so it is essential to understand how they spread across society. Generally, people have two ways of gathering information: individual experimentation vs. social learning. If there is no social network and individual has to gain every piece of information through their own experiment, it would be time-consuming and lead to slow economic development. However, if we rely too much on social networks, it would crowd out new information generation and new trials. Therefore, it is important to find the best social network density for innovation diffusion and our simulator can help to identify such optimal density using math modeling and microeconomics theories. 
 
 ## Usage
-The main tool is `final_wrapper_V()` located in `final_wrapper_V.m`. User has to put `final_V.m` and `final_solver.m` in the same working directory when running `final_wrapper_V()`.  
+The main tool is `final_wrapper_V()`. User has to put `final_V.m` and `final_solver.m` in the same directory when running `final_wrapper_V()`.  
 
 The input parameters of `final_wrapper_V()` are:
 
@@ -20,8 +20,8 @@ The input parameters of `final_wrapper_V()` are:
 The output of `final_wrapper_V()` is a table which includes:
 
 - `K_all`: This is the row name of the table which indicates the number of core members(K) used in each lines of results.
-- `tau_k_all`: the cutoff time of core members in the network
-- `tau_l_all`:  the cutoff time of peripheral members in the network
+- `tau_k_all`: $\tau_k$, the cutoff time of core members in the network
+- `tau_l_all`: $\tau_l$, the cutoff time of peripheral members in the network
 - `V_all`: the expected social welfare
 - `benchmark`: the social welfare benchmark 
 
