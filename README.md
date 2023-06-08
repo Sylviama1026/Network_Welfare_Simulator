@@ -5,7 +5,7 @@ This MATLAB simulator can generate welfare and social information plots for diff
 Innovations are key drivers of long-term economic growth, so it is essential to understand how they spread across society. Generally, people have two ways of gathering information: individual experimentation vs. social learning. If there is no social network and individual has to gain every piece of information through their own experiment, it would be time-consuming and lead to slow economic development. However, if we rely too much on social networks, it would crowd out new information generation and new trials. Therefore, it is important to find the best social network density for innovation diffusion and our simulator can help to identify such optimal density using math modeling and microeconomics theories. 
 
 ## Usage
-The main tool is `final_wrapper_V()`. User has to put `final_V.m` and `final_solver.m` in the same directory when running `final_wrapper_V()`.  
+The main tool is `final_wrapper_V()`. User has to put `final_V.m` and `final_solver.m` in the same directory when running `final_wrapper_V()`. Optimization Toolbox and Parallel Computing Toolbox are required to be installed in MATLAB before running `final_wrapper_V()`. 
 
 The input parameters of `final_wrapper_V()` are:
 
@@ -16,6 +16,7 @@ The input parameters of `final_wrapper_V()` are:
 - `r`: A single number, indicated the discounted rate of future benefits
 - `p0`: A single number between 0 and 1, indicated the prior of belief for success in all agents at t=0.
 - `m0`: A 1x2 vector, indicated the initial guess of the cutoff time $\tau$ for core and peripheral members.
+- `ncores`: A single number, indicated the number of cores used in parallel computing.
 
 The output of `final_wrapper_V()` is a table which includes:
 
