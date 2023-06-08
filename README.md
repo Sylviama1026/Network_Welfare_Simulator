@@ -10,22 +10,25 @@ The main tool is `final_wrapper_V()`. User has to put `final_V.m` and `final_sol
 The input parameters of `final_wrapper_V()` are:
 
 - `I`: A large integer indicated the total number of people(nodes) in the network.
-- `K_all`: A 1xn vector of integers that are smaller than I, indicated the total number of core members in the network. `L_all` will automatically be `I-K_all`. `n` can be set by users according the number of different K values one wants to try. 
+- `K_all`: A 1xn vector of integers that are smaller than I, indicated the total number of core agents in the network. `L_all` will automatically be `I-K_all`. `n` can be set by users according the number of different K values one wants to try. 
 - `x`: A single number, indicated the payoff received by agent’s own successes 
 - `c`: A single number, indicated the cost of an agent’s private efforts to generate successes
 - `r`: A single number, indicated the discounted rate of future benefits
 - `p0`: A single number between 0 and 1, indicated the prior of belief for success in all agents at t=0.
-- `m0`: A 1x2 vector, indicated the initial guess of the cutoff time $\tau$ for core and peripheral members.
+- `m0`: A 1x2 vector, indicated the initial guess of the cutoff time $\tau$ for core and peripheral agents.
 - `ncores`: A single number, indicated the number of cores used in parallel computing.
 
 The output of `final_wrapper_V()` is a table which includes:
 
-- `K_all`: This is the row name of the table which indicates the number of core members(K) used in each lines of results.
-- `tau_k_all`: $\tau_k$ the cutoff time of core members in the network
-- `tau_l_all`: $\tau_l$ the cutoff time of peripheral members in the network
+- `K_all`: This is the row name of the table which indicates the number of core agents(K) used in each lines of results.
+- `tau_k_all`: $\tau_k$ the cutoff time of core agents in the network
+- `tau_l_all`: $\tau_l$ the cutoff time of peripheral agents in the network
 - `V_all`: the expected social welfare at the corresponding K
 - `benchmark`: the social welfare benchmark 
 
-## Customization
-Please check out `final_tool_all.m` to see the details code of the wrapper function above and customize the outputs as needed. 
+## Major Files
+- `final_wrapper_V.m`: the wrapper function that call `final_V.m` and `final_solver.m` to solve welfare, $\tau_k$, and $\tau_l$, and plot welfare across different K.
+- `final_tool_all.m`: expand the wrapper function `final_wrapper_V()`. It can be used to customize function output as needed.
+- `final_solver.m`: compute $\tau_l$ and $\tau_k$ by solving indffierence conditions for core and peripheral agents respectively, with parameters $I$, $L(=I-K)$, $x$, $y(=(x-c)/r)$, $c$, $r$, $p0$
+- `final_V.m`: compute welfare as a function of K with parameters $\tau_l$, $\tau_k$, $I$, $L(=I-K)$, $x$, $c$, $r$, $p0$
 
