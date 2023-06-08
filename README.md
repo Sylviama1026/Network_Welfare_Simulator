@@ -20,9 +20,9 @@ The input parameters of `final_wrapper_V()` are:
 The output of `final_wrapper_V()` is a table which includes:
 
 - `K_all`: This is the row name of the table which indicates the number of core members(K) used in each lines of results.
-- `tau_k_all`: $\tau_k$, the cutoff time of core members in the network
-- `tau_l_all`: $\tau_l$, the cutoff time of peripheral members in the network
-- `V_all`: the expected social welfare
+- `tau_k_all`: $\tau_k$ the cutoff time of core members in the network
+- `tau_l_all`: $\tau_l$ the cutoff time of peripheral members in the network
+- `V_all`: the expected social welfare at the corresponding K
 - `benchmark`: the social welfare benchmark 
 
 ## Customization
