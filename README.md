@@ -27,7 +27,7 @@ The output of `final_wrapper_V()` is a welfare plot and a nx5 table which includ
 - `B_inf`: the asymptotic information at each K
 
 ## Usage: Compute and Plot Total Information Across Time(Learning Curve)
-The tool to commpute total information is `final_wrapper_B()`. User has to put `f_B.m` to the same directory as `final_wrapper_B.m`. $\tau_k$ and $\tau_l$ must have been solved by `final_wrapper_V()` to be input of this function. 
+The tool is `final_wrapper_B()`. User has to put `f_B.m` to the same directory as `final_wrapper_B.m`. $\tau_k$ and $\tau_l$ must have been solved by `final_wrapper_V()` to be input of this function. 
 
 The input parameters of `final_wrapper_B()` are:
 
@@ -37,9 +37,9 @@ The input parameters of `final_wrapper_B()` are:
 - `tau_l_all`: A 1xn vector with the same length as `K_all`. $\tau_k$ the cutoff time of core agents in the network, which can be get from the output of `final_wrapper_V()`
 - `tau_k_all`: A 1xn vector with the same length as `K_all`, $\tau_l$ the cutoff time of peripheral agents in the network, which can be get from the output of `final_wrapper_V()`
 
-The output of `final_wrapper_B()` is learning curve plots at each K and `T_B` a length(K_all) x length(t_para) matrix which includes:
+The output of `final_wrapper_B()` is learning curve plots at each K and `T_B`, a length(K_all) x length(t_para) matrix which includes:
 
-- `B_t`: A nxm matrix stored total information at each K(each row) and time(each column). To check out the exact value of B, type `T_B(4,:)` to see the value of B_t when `K=K_all(4)=10`.
+- `B_t`: A nxm matrix stored total information at each K(each row) and time(each column). To check out the exact value of B, type `T_B(4,:)` to see the value of B_t when `K=K_all(4)=10` given we set `K_all=[1, 2, 5, 10, 20, 30, 40, 70, 100]`
 
 ## Major Files
 For usage:
@@ -52,4 +52,11 @@ For usage:
 For illustrations and customizations:
 - `final_example.m`: an illustration of how to use `final_wrapper_V()` to compute cutoff time $\tau$ and generate welfare plot and how to use `final_wrapper_B()` to compute total information across time for each K given by the user. 
 - `final_tool_all.m`: expand the wrapper function `final_wrapper_V()` and `final_wrapper_B()`. It shows the entire workflow and can be used to generate partial output and customize plots as needed.
+- 
+## Other Folders
 
+### Previous_Trials
+These are previous versions of the simulator, just for future reference. Files start with `f_` or `my` are functions for V and B, starts with `graph` are for plotting V and B, starts with `plot` are for plotting the intersection of $\tau_k$ and $\tau_l$, and starts with `solve_` are for solving $\tau_k$ and $\tau_l$. Some of the previous simulator hard coded `p0=0.5`. `Monogamy.m` and `Poisson.m` are for the talk about Epidemic Graph from Professor Meyer-ter-Vehn on May 8th.
+
+### Papers_Presentations
+This folder includes presentation slides at each stage of this project for 1-1 meeting with Professor Meyer-ter-Vehn, Board of Vistors Meeting at Economics Department, and UCLA Undergraduate Research Week. Also, it includes the theoretical paper that the simulator is based on and the a summary doc for my own purpose. 
