@@ -52,11 +52,12 @@ For usage:
 For illustrations and customizations:
 - `final_example.m`: an illustration of how to use `final_wrapper_V()` to compute cutoff time $\tau$ and generate welfare plot and how to use `final_wrapper_B()` to compute total information across time for each K given by the user. 
 - `final_tool_all.m`: expand the wrapper function `final_wrapper_V()` and `final_wrapper_B()`. It shows the entire workflow and can be used to generate partial output and customize plots as needed.
-- 
+
+
 ## Other Folders
 
 ### Previous_Trials
-These are previous versions of the simulator, just for future reference. Files start with `f_` or `my` are functions for V and B, starts with `graph` are for plotting V and B, starts with `plot` are for plotting the intersection of $\tau_k$ and $\tau_l$(where the mat files starts with `l_fsolve_all_` are the plotting data stored when K=100 and 10), and files starts with `solve_` are for solving $\tau_k$ and $\tau_l$. Some of the previous simulator hard coded `p0=0.5`. `Monogamy.m` and `Poisson.m` are for the talk about Epidemic Graph from Professor Meyer-ter-Vehn on May 8th.
+These are previous versions of the simulator, just for future reference. Files start with `f_` or `my` are functions for V and B, starts with `graph` are for plotting V and B, starts with `plot` are for plotting the intersection of $\tau_k$ and $\tau_l$(where the mat files starts with `l_fsolve_all_` are the plotting data stored for K=100 and 10), and files starts with `solve_` are for solving $\tau_k$ and $\tau_l$. Some of the previous simulator hard coded `p0=0.5`. `Monogamy.m` and `Poisson.m` are for the talk about Epidemic Graph from Professor Meyer-ter-Vehn on May 8th.
 
 ### Papers_Presentations
 This folder includes presentation slides at each stage of this project for 1-1 meeting with Professor Meyer-ter-Vehn, Board of Vistors Meeting at Economics Department, and UCLA Undergraduate Research Week. Also, it includes the a summary doc of the theoretical paper that the simulator is based on for my own purpose. 
