@@ -20,8 +20,8 @@ The input parameters of `final_wrapper_V()` are:
 
 The output of `final_wrapper_V()` is 
 - a plot of welfare for different K
-- `V_benchmark`: the welfare benchmark in theories calculated by $p0*(x+y)-c$
-- `K*`: the expected optimal density in theories calculated solving $p0*(x+\frac{r}{r+k}*y)=c$
+- `V_benchmark`: the welfare benchmark in theories calculated by $p0*(x+y)-c$, printed out in the Command Window
+- `K*`: the expected optimal density in theories calculated by solving $p0*(x+\frac{r}{r+k}*y)=c$, printed out in the Command Window
 - a nx5 table which includes:
   - `K`: This is the row name of the table which indicates the number of core agents(K) used in each lines of results.
   - `tau_k`: $\tau_k$ the cutoff time of core agents in the network
