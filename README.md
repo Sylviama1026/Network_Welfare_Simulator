@@ -18,13 +18,16 @@ The input parameters of `final_wrapper_V()` are:
 - `m0`: A 1x2 vector, indicated the initial guess of the cutoff time $\tau$ for core and peripheral agents.
 - `ncores`: A single number, indicated the number of cores used in parallel computing.
 
-The output of `final_wrapper_V()` is a welfare plot and a nx5 table which includes:
-
-- `K`: This is the row name of the table which indicates the number of core agents(K) used in each lines of results.
-- `tau_k`: $\tau_k$ the cutoff time of core agents in the network
-- `tau_l`: $\tau_l$ the cutoff time of peripheral agents in the network
-- `V`: the expected social welfare at each K
-- `B_inf`: the asymptotic information at each K
+The output of `final_wrapper_V()` is 
+- a plot of welfare for different K
+- `V_benchmark`: the welfare benchmark in theories calculated by $p0*(x+y)-c$
+- `K*`: the expected optimal density in theories calculated solving $p0*(x+\frac{r}{r+k}*y)=c$
+- a nx5 table which includes:
+  - `K`: This is the row name of the table which indicates the number of core agents(K) used in each lines of results.
+  - `tau_k`: $\tau_k$ the cutoff time of core agents in the network
+  - `tau_l`: $\tau_l$ the cutoff time of peripheral agents in the network
+  - `V`: the expected social welfare at each K
+  - `B_inf`: the asymptotic information at each K
 
 ## Usage: Compute and Plot Total Information Across Time(Learning Curve)
 The tool is `final_wrapper_B()`. User has to put `f_B.m` to the same directory as `final_wrapper_B.m`. $\tau_k$ and $\tau_l$ must have been solved by `final_wrapper_V()` to be input of this function. 
