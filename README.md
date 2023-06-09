@@ -56,7 +56,7 @@ For illustrations and customizations:
 ## Other Folders
 
 ### Previous_Trials
-These are previous versions of the simulator, just for future reference. Files start with `f_` or `my` are functions for V and B, starts with `graph` are for plotting V and B, starts with `plot` are for plotting the intersection of $\tau_k$ and $\tau_l$, and starts with `solve_` are for solving $\tau_k$ and $\tau_l$. Some of the previous simulator hard coded `p0=0.5`. `Monogamy.m` and `Poisson.m` are for the talk about Epidemic Graph from Professor Meyer-ter-Vehn on May 8th.
+These are previous versions of the simulator, just for future reference. Files start with `f_` or `my` are functions for V and B, starts with `graph` are for plotting V and B, starts with `plot` are for plotting the intersection of $\tau_k$ and $\tau_l$(where the mat files starts with `l_fsolve_all_` are the plotting data stored when K=100 and 10), and files starts with `solve_` are for solving $\tau_k$ and $\tau_l$. Some of the previous simulator hard coded `p0=0.5`. `Monogamy.m` and `Poisson.m` are for the talk about Epidemic Graph from Professor Meyer-ter-Vehn on May 8th.
 
 ### Papers_Presentations
-This folder includes presentation slides at each stage of this project for 1-1 meeting with Professor Meyer-ter-Vehn, Board of Vistors Meeting at Economics Department, and UCLA Undergraduate Research Week. Also, it includes the theoretical paper that the simulator is based on and the a summary doc for my own purpose. 
+This folder includes presentation slides at each stage of this project for 1-1 meeting with Professor Meyer-ter-Vehn, Board of Vistors Meeting at Economics Department, and UCLA Undergraduate Research Week. Also, it includes the a summary doc of the theoretical paper that the simulator is based on for my own purpose. 
