@@ -49,8 +49,8 @@ For usage:
 - `final_wrapper_V.m`: the wrapper function that call `final_V.m` and `final_solver.m` to solve welfare $V$, $\tau_k$, and $\tau_l$, and plot welfare across different K.
 - `final_wrapper_B.m`: the wrapper function that call `f_B.m` to solve total information $B$ and plot $B$ across time(=t_para). One need to solve $\tau_k$ and $\tau_l$ before running this. 
 - `final_solver.m`: store the indffierence conditions for core and peripheral agents respectively. It will be called by final_wrapper_V using `fsolve()` to solve $\tau_l$ and $\tau_k$ with parameters $I$, $L(=I-K)$, $x$, $y(=\frac{x-c}{r})$, $c$, $r$, $p0$
-- `final_V.m`: store welfare as a function of K. It will be called by final_wrapper_V with parameters $\tau_l$, $\tau_k$, $I$, $L(=I-K)$, $x$, $c$, $r$, $p0$
-- `f_B.m`: store total information as a function of time and K. It will be called by final_wrapper_B with parameters $t$, $\tau_k$, $\tau_l$, $I$, $L(=I-K)$
+- `final_V.m`: store welfare as a function of K. It will be called by `final_wrapper_V` with parameters $\tau_l$, $\tau_k$, $I$, $L(=I-K)$, $x$, $c$, $r$, $p0$
+- `f_B.m`: store total information as a function of time and K. It will be called by `final_wrapper_B` with parameters $t$, $\tau_k$, $\tau_l$, $I$, $L(=I-K)$
 
 For illustrations and customizations:
 - `final_example.m`: an illustration of how to use `final_wrapper_V()` to compute cutoff time $\tau$ and generate welfare plot and how to use `final_wrapper_B()` to compute total information across time for each K given by the user. 
