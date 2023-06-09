@@ -1,3 +1,6 @@
+%Store total information as a function of time and K.
+%%% It will be called by final_wrapper_B()
+
 function eqn_B=f_B(t, k, l, I, L)
 if t<k
     eqn_B=(I-L)*t;

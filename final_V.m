@@ -1,3 +1,6 @@
+% Store welfare as a function of K. 
+%%% It will be called by final_wrapper_V()
+
 function V=final_V(l, k, I, L, x, c, r, p0)
     if l<k
         B_l=(I-L)*l;
