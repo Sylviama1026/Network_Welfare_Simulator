@@ -1,5 +1,5 @@
 # Network_Welfare_Simulator
-This MATLAB simulator can generate welfare and social information plots for different network density in Core-Periphery Social Network, which helps to identity the best social network density for information diffusion.
+This MATLAB simulator can simulate social welfare and social learning curve at different network density in a Core-Periphery Social Network, which helps to identity the best social network density for information diffusion.
 
 ## Introduction
 Innovations are key drivers of long-term economic growth, so it is essential to understand how they spread across society. Generally, people have two ways of gathering information: individual experimentation vs. social learning. If there is no social network and individual has to gain every piece of information through their own experiment, it would be time-consuming and lead to slow economic development. However, if we rely too much on social networks, it would crowd out new information generation and new trials. Therefore, it is important to find the best social network density for innovation diffusion and our simulator can help to identify such optimal density using math modeling and microeconomics theories. 
