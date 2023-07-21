@@ -3,7 +3,7 @@
 
 function [tau] = final_solver(k, l, I, L, x, y, c, r, p0)
     %solver for tau_k
-    tau(1) = p0*exp(-I*k)/(p0*exp(-I*k)+(1-p0))*(x+y-L/(r+L)*y*(1-exp((r+L)*k)/exp((r+L)*l)))-c;
+    tau(1) = p0*exp(-I*k)/(p0*exp(-I*k)+(1-p0))*(x+y-L/(r+L)+L/(r+L)*y*exp((r+L)*k)/exp((r+L)*l))-c;
     
     %solver for tau_l
     syms t s;
